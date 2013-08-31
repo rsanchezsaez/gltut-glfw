@@ -63,6 +63,13 @@ Scene::Scene()
     printOpenGLError();
 }
 
+Scene::~Scene()
+{
+    glDeleteProgram(_shaderProgram);
+    glDeleteBuffers(1, &_positionBufferObject);
+    printOpenGLError();
+}
+
 void Scene::draw()
 {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
