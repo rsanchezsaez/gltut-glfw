@@ -849,6 +849,7 @@
 		320D6D0017D2AE0E00F96CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"GLFW_INCLUDE_GLCOREARB=1",
@@ -863,6 +864,7 @@
 		320D6D0117D2AE0E00F96CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = "GLFW_INCLUDE_GLCOREARB=1";
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
@@ -874,6 +876,7 @@
 		325496C617D2B37700CE2ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"GLFW_INCLUDE_GLCOREARB=1",
@@ -888,6 +891,7 @@
 		325496C717D2B37700CE2ECA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = "GLFW_INCLUDE_GLCOREARB=1";
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
@@ -969,6 +973,7 @@
 		3286CF5117BD78F40011D6DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"GLFW_INCLUDE_GLCOREARB=1",
@@ -983,6 +988,7 @@
 		3286CF5217BD78F40011D6DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_PREPROCESSOR_DEFINITIONS = "GLFW_INCLUDE_GLCOREARB=1";
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
