@@ -2,8 +2,10 @@
 //  glhelpers.h
 //  gltut-glfw
 //
-//  Created by Ricardo Sánchez-Sáez on 31/08/2013.
-//  Copyright (c) 2013 rsanchezsaez. All rights reserved.
+// Copyright (C) 2010-2012 by Jason L. McKesson
+// Xcode and glfw adaptation: Ricardo Sánchez-Sáez.
+//
+// This file is licensed under the MIT License.
 //
 
 #ifndef gltut_glfw_glhelpers_h

@@ -2,8 +2,9 @@
 //  debug.h
 //  gltut-glfw
 //
-//  Created by Ricardo Sánchez-Sáez on 15/08/2013.
-//  Copyright (c) 2013 rsanchezsaez. All rights reserved.
+//  Copyright (c) 2013 Ricardo Sánchez-Sáez.
+//
+// This file is licensed under the MIT License.
 //
 
 #ifndef gltut_glfw_debug_h
