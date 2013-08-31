@@ -27,14 +27,24 @@ GLFWwindow* createWindow()
     return glfwCreateWindow(1024, 640, gltutglfwName, NULL, NULL);
 }
 
+Scene scene = Scene();
+
+void onFramebufferResize(GLFWwindow* window, int width, int height)
+{
+    scene.draw();
+    glfwSwapBuffers(window);
+
+}
+
 int main(int argc, const char * argv[])
 {
     
     GLFWwindow* window = createWindow();
     glfwMakeContextCurrent(window);
 
-    Scene scene = Scene();
-    
+    scene.init();
+    glfwSetFramebufferSizeCallback(window, &onFramebufferResize);
+
     while (!glfwWindowShouldClose(window))
     {
         scene.draw();

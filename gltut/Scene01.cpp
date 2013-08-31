@@ -45,6 +45,10 @@ const float vertexPositions[] =
 
 Scene::Scene()
 {
+}
+
+void Scene::init()
+{
     _shaderProgram = createShaderProgram(vertexShaderString, fragmentShaderString);
     glUseProgram(_shaderProgram);
     printOpenGLError();
@@ -72,7 +76,7 @@ Scene::~Scene()
 
 void Scene::draw()
 {
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(0.8f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
 	glBindBuffer(GL_ARRAY_BUFFER, _positionBufferObject);
