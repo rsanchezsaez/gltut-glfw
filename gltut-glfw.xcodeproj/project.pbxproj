@@ -17,9 +17,19 @@
 		320D6CFB17D2AE0E00F96CCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5317BD7A270011D6DC /* CoreGraphics.framework */; };
 		320D6CFC17D2AE0E00F96CCD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5517BD7A320011D6DC /* CoreFoundation.framework */; };
 		320D6CFD17D2AE0E00F96CCD /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3205A62317D28FC000306F8C /* libglfw3.a */; };
-		321B8C3417D2B18600A46235 /* FragPosition.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 320D6D0317D2AECF00F96CCD /* FragPosition.frag */; };
-		321B8C3517D2B18600A46235 /* FragPosition.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 320D6D0417D2AECF00F96CCD /* FragPosition.vert */; };
-		325496B617D2B2F900CE2ECA /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320D6CF217D2ADF700F96CCD /* Scene.cpp */; };
+		325496BA17D2B37700CE2ECA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main.cpp */; };
+		325496BC17D2B37700CE2ECA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5E17BD7A650011D6DC /* OpenGL.framework */; };
+		325496BD17D2B37700CE2ECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5C17BD7A5A0011D6DC /* Cocoa.framework */; };
+		325496BE17D2B37700CE2ECA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5817BD7A430011D6DC /* IOKit.framework */; };
+		325496BF17D2B37700CE2ECA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5317BD7A270011D6DC /* CoreGraphics.framework */; };
+		325496C017D2B37700CE2ECA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5517BD7A320011D6DC /* CoreFoundation.framework */; };
+		325496C117D2B37700CE2ECA /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3205A62317D28FC000306F8C /* libglfw3.a */; };
+		325496D117D2B3C900CE2ECA /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 325496D017D2B3B900CE2ECA /* Scene.cpp */; };
+		325496D217D2B3CC00CE2ECA /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 325496CA17D2B3B900CE2ECA /* Scene.cpp */; };
+		325496D317D2B4BB00CE2ECA /* VertexColors.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 325496CB17D2B3B900CE2ECA /* VertexColors.frag */; };
+		325496D417D2B4BB00CE2ECA /* VertexColors.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 325496CC17D2B3B900CE2ECA /* VertexColors.vert */; };
+		325496D517D2B4C500CE2ECA /* FragPosition.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 325496CE17D2B3B900CE2ECA /* FragPosition.frag */; };
+		325496D617D2B4C500CE2ECA /* FragPosition.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 325496CF17D2B3B900CE2ECA /* FragPosition.vert */; };
 		3286CF5617BD7A320011D6DC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5517BD7A320011D6DC /* CoreFoundation.framework */; };
 		3286CF5717BD7A380011D6DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5317BD7A270011D6DC /* CoreGraphics.framework */; };
 		3286CF5917BD7A430011D6DC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5817BD7A430011D6DC /* IOKit.framework */; };
@@ -34,8 +44,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				321B8C3417D2B18600A46235 /* FragPosition.frag in CopyFiles */,
-				321B8C3517D2B18600A46235 /* FragPosition.vert in CopyFiles */,
+				325496D517D2B4C500CE2ECA /* FragPosition.frag in CopyFiles */,
+				325496D617D2B4C500CE2ECA /* FragPosition.vert in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325496C217D2B37700CE2ECA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				325496D317D2B4BB00CE2ECA /* VertexColors.frag in CopyFiles */,
+				325496D417D2B4BB00CE2ECA /* VertexColors.vert in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +72,14 @@
 		3205A62C17D2992D00306F8C /* glhelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glhelpers.h; sourceTree = "<group>"; };
 		3205A62E17D29C1100306F8C /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		320D6CEF17D2AD8A00F96CCD /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		320D6CF217D2ADF700F96CCD /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		320D6D0217D2AE0E00F96CCD /* gltut 02 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 02"; sourceTree = BUILT_PRODUCTS_DIR; };
-		320D6D0317D2AECF00F96CCD /* FragPosition.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragPosition.frag; sourceTree = "<group>"; };
-		320D6D0417D2AECF00F96CCD /* FragPosition.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragPosition.vert; sourceTree = "<group>"; };
+		320D6D0217D2AE0E00F96CCD /* gltut 02a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 02a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		325496C817D2B37700CE2ECA /* gltut 02b */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 02b"; sourceTree = BUILT_PRODUCTS_DIR; };
+		325496CA17D2B3B900CE2ECA /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		325496CB17D2B3B900CE2ECA /* VertexColors.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexColors.frag; sourceTree = "<group>"; };
+		325496CC17D2B3B900CE2ECA /* VertexColors.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexColors.vert; sourceTree = "<group>"; };
+		325496CE17D2B3B900CE2ECA /* FragPosition.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragPosition.frag; sourceTree = "<group>"; };
+		325496CF17D2B3B900CE2ECA /* FragPosition.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragPosition.vert; sourceTree = "<group>"; };
+		325496D017D2B3B900CE2ECA /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		3286CF4717BD78F40011D6DC /* gltut 01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3286CF5317BD7A270011D6DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3286CF5517BD7A320011D6DC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -303,6 +328,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		325496BB17D2B37700CE2ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325496BC17D2B37700CE2ECA /* OpenGL.framework in Frameworks */,
+				325496BD17D2B37700CE2ECA /* Cocoa.framework in Frameworks */,
+				325496BE17D2B37700CE2ECA /* IOKit.framework in Frameworks */,
+				325496BF17D2B37700CE2ECA /* CoreGraphics.framework in Frameworks */,
+				325496C017D2B37700CE2ECA /* CoreFoundation.framework in Frameworks */,
+				325496C117D2B37700CE2ECA /* libglfw3.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3286CF4417BD78F40011D6DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,8 +388,9 @@
 		3205A62517D28FD400306F8C /* gltut */ = {
 			isa = PBXGroup;
 			children = (
-				320D6CF117D2ADF700F96CCD /* gltut 02 */,
 				320D6CEE17D2AD8A00F96CCD /* gltut 01 */,
+				325496CD17D2B3B900CE2ECA /* gltut 02a */,
+				325496C917D2B3B900CE2ECA /* gltut 02b */,
 				3205A62E17D29C1100306F8C /* Scene.h */,
 				3205A62817D28FD400306F8C /* main.cpp */,
 				3205A62717D28FD400306F8C /* debug.h */,
@@ -368,14 +407,24 @@
 			path = "gltut 01";
 			sourceTree = "<group>";
 		};
-		320D6CF117D2ADF700F96CCD /* gltut 02 */ = {
+		325496C917D2B3B900CE2ECA /* gltut 02b */ = {
 			isa = PBXGroup;
 			children = (
-				320D6D0317D2AECF00F96CCD /* FragPosition.frag */,
-				320D6D0417D2AECF00F96CCD /* FragPosition.vert */,
-				320D6CF217D2ADF700F96CCD /* Scene.cpp */,
+				325496CA17D2B3B900CE2ECA /* Scene.cpp */,
+				325496CB17D2B3B900CE2ECA /* VertexColors.frag */,
+				325496CC17D2B3B900CE2ECA /* VertexColors.vert */,
 			);
-			path = "gltut 02";
+			path = "gltut 02b";
+			sourceTree = "<group>";
+		};
+		325496CD17D2B3B900CE2ECA /* gltut 02a */ = {
+			isa = PBXGroup;
+			children = (
+				325496CE17D2B3B900CE2ECA /* FragPosition.frag */,
+				325496CF17D2B3B900CE2ECA /* FragPosition.vert */,
+				325496D017D2B3B900CE2ECA /* Scene.cpp */,
+			);
+			path = "gltut 02a";
 			sourceTree = "<group>";
 		};
 		3286CF3E17BD78F40011D6DC = {
@@ -391,7 +440,8 @@
 			isa = PBXGroup;
 			children = (
 				3286CF4717BD78F40011D6DC /* gltut 01 */,
-				320D6D0217D2AE0E00F96CCD /* gltut 02 */,
+				320D6D0217D2AE0E00F96CCD /* gltut 02a */,
+				325496C817D2B37700CE2ECA /* gltut 02b */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -687,9 +737,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		320D6CF317D2AE0E00F96CCD /* gltut 02 */ = {
+		320D6CF317D2AE0E00F96CCD /* gltut 02a */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02" */;
+			buildConfigurationList = 320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02a" */;
 			buildPhases = (
 				320D6CF417D2AE0E00F96CCD /* Sources */,
 				320D6CF717D2AE0E00F96CCD /* Frameworks */,
@@ -699,9 +749,26 @@
 			);
 			dependencies = (
 			);
-			name = "gltut 02";
+			name = "gltut 02a";
 			productName = circular;
-			productReference = 320D6D0217D2AE0E00F96CCD /* gltut 02 */;
+			productReference = 320D6D0217D2AE0E00F96CCD /* gltut 02a */;
+			productType = "com.apple.product-type.tool";
+		};
+		325496B717D2B37700CE2ECA /* gltut 02b */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325496C517D2B37700CE2ECA /* Build configuration list for PBXNativeTarget "gltut 02b" */;
+			buildPhases = (
+				325496B817D2B37700CE2ECA /* Sources */,
+				325496BB17D2B37700CE2ECA /* Frameworks */,
+				325496C217D2B37700CE2ECA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gltut 02b";
+			productName = circular;
+			productReference = 325496C817D2B37700CE2ECA /* gltut 02b */;
 			productType = "com.apple.product-type.tool";
 		};
 		3286CF4617BD78F40011D6DC /* gltut 01 */ = {
@@ -742,7 +809,8 @@
 			projectRoot = "";
 			targets = (
 				3286CF4617BD78F40011D6DC /* gltut 01 */,
-				320D6CF317D2AE0E00F96CCD /* gltut 02 */,
+				320D6CF317D2AE0E00F96CCD /* gltut 02a */,
+				325496B717D2B37700CE2ECA /* gltut 02b */,
 			);
 		};
 /* End PBXProject section */
@@ -752,8 +820,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325496B617D2B2F900CE2ECA /* Scene.cpp in Sources */,
+				325496D117D2B3C900CE2ECA /* Scene.cpp in Sources */,
 				320D6CF617D2AE0E00F96CCD /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325496B817D2B37700CE2ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325496D217D2B3CC00CE2ECA /* Scene.cpp in Sources */,
+				325496BA17D2B37700CE2ECA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,7 +856,7 @@
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
 				OTHER_LDFLAGS = "-lglfw3";
-				PRODUCT_NAME = "gltut 02";
+				PRODUCT_NAME = "gltut 02a";
 			};
 			name = Debug;
 		};
@@ -790,7 +867,32 @@
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
 				OTHER_LDFLAGS = "-lglfw3";
-				PRODUCT_NAME = "gltut 02";
+				PRODUCT_NAME = "gltut 02a";
+			};
+			name = Release;
+		};
+		325496C617D2B37700CE2ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"GLFW_INCLUDE_GLCOREARB=1",
+				);
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_NAME = "gltut 02b";
+			};
+			name = Debug;
+		};
+		325496C717D2B37700CE2ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "GLFW_INCLUDE_GLCOREARB=1";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1/include";
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_NAME = "gltut 02b";
 			};
 			name = Release;
 		};
@@ -892,11 +994,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02" */ = {
+		320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				320D6D0017D2AE0E00F96CCD /* Debug */,
 				320D6D0117D2AE0E00F96CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325496C517D2B37700CE2ECA /* Build configuration list for PBXNativeTarget "gltut 02b" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325496C617D2B37700CE2ECA /* Debug */,
+				325496C717D2B37700CE2ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
