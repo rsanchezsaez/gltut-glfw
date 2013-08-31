@@ -10,7 +10,7 @@
 
 #include "GLFW/glfw3.h"
 
-#include "Scene01.h"
+#include "Scene.h"
 
 const char* gltutglfwName = "gltut-glfw";
 

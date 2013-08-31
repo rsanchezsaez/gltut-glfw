@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 rsanchezsaez. All rights reserved.
 //
 
-#include "Scene01.h"
+#include "Scene.h"
 
 #include <string>
 #include <vector>

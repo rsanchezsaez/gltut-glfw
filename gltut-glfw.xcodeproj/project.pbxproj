@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3205A62417D28FC000306F8C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3205A62317D28FC000306F8C /* libglfw3.a */; };
-		3205A62917D28FD400306F8C /* main01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main01.cpp */; };
-		3205A62F17D29C1100306F8C /* Scene01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62D17D29C1100306F8C /* Scene01.cpp */; };
+		3205A62917D28FD400306F8C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main.cpp */; };
+		320D6CF017D2AD8A00F96CCD /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320D6CEF17D2AD8A00F96CCD /* Scene.cpp */; };
 		3286CF5617BD7A320011D6DC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5517BD7A320011D6DC /* CoreFoundation.framework */; };
 		3286CF5717BD7A380011D6DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5317BD7A270011D6DC /* CoreGraphics.framework */; };
 		3286CF5917BD7A430011D6DC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5817BD7A430011D6DC /* IOKit.framework */; };
@@ -35,11 +35,11 @@
 		3205A62217D28FC000306F8C /* glfw3native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3native.h; sourceTree = "<group>"; };
 		3205A62317D28FC000306F8C /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
 		3205A62717D28FD400306F8C /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		3205A62817D28FD400306F8C /* main01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main01.cpp; sourceTree = "<group>"; };
+		3205A62817D28FD400306F8C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3205A62C17D2992D00306F8C /* glhelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glhelpers.h; sourceTree = "<group>"; };
-		3205A62D17D29C1100306F8C /* Scene01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene01.cpp; sourceTree = "<group>"; };
-		3205A62E17D29C1100306F8C /* Scene01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene01.h; sourceTree = "<group>"; };
-		3286CF4717BD78F40011D6DC /* gltut-glfw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut-glfw"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3205A62E17D29C1100306F8C /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		320D6CEF17D2AD8A00F96CCD /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		3286CF4717BD78F40011D6DC /* gltut 01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3286CF5317BD7A270011D6DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3286CF5517BD7A320011D6DC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3286CF5817BD7A430011D6DC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -321,13 +321,21 @@
 		3205A62517D28FD400306F8C /* gltut */ = {
 			isa = PBXGroup;
 			children = (
-				3205A62D17D29C1100306F8C /* Scene01.cpp */,
-				3205A62E17D29C1100306F8C /* Scene01.h */,
-				3205A62817D28FD400306F8C /* main01.cpp */,
+				320D6CEE17D2AD8A00F96CCD /* gltut 01 */,
+				3205A62E17D29C1100306F8C /* Scene.h */,
+				3205A62817D28FD400306F8C /* main.cpp */,
 				3205A62717D28FD400306F8C /* debug.h */,
 				3205A62C17D2992D00306F8C /* glhelpers.h */,
 			);
 			path = gltut;
+			sourceTree = "<group>";
+		};
+		320D6CEE17D2AD8A00F96CCD /* gltut 01 */ = {
+			isa = PBXGroup;
+			children = (
+				320D6CEF17D2AD8A00F96CCD /* Scene.cpp */,
+			);
+			path = "gltut 01";
 			sourceTree = "<group>";
 		};
 		3286CF3E17BD78F40011D6DC = {
@@ -342,7 +350,7 @@
 		3286CF4817BD78F40011D6DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3286CF4717BD78F40011D6DC /* gltut-glfw */,
+				3286CF4717BD78F40011D6DC /* gltut 01 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -652,7 +660,7 @@
 			);
 			name = "gltut 01";
 			productName = circular;
-			productReference = 3286CF4717BD78F40011D6DC /* gltut-glfw */;
+			productReference = 3286CF4717BD78F40011D6DC /* gltut 01 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -686,8 +694,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3205A62917D28FD400306F8C /* main01.cpp in Sources */,
-				3205A62F17D29C1100306F8C /* Scene01.cpp in Sources */,
+				320D6CF017D2AD8A00F96CCD /* Scene.cpp in Sources */,
+				3205A62917D28FD400306F8C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
