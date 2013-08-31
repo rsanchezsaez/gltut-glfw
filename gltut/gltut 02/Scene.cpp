@@ -14,28 +14,6 @@
 #include "debug.h"
 #include "glhelpers.h"
 
-const std::string vertexShaderString(
-                                     "#version 330\n"
-                                     " "
-                                     "layout(location = 0) in vec4 inputPosition; "
-                                     " "
-                                     "void main() "
-                                     "{ "
-                                     "   gl_Position = inputPosition; "
-                                     "} "
-                                     );
-
-const std::string fragmentShaderString(
-                                       "#version 330\n"
-                                       " "
-                                       "out vec4 outputColor; "
-                                       " "
-                                       "void main() "
-                                       "{ "
-                                       "   outputColor = vec4( 1.0f, 1.0f, 1.0f, 1.0f ); "
-                                       "} "
-                                       );
-
 const float vertexPositions[] =
 {
 	0.75f, 0.75f, 0.0f, 1.0f,
@@ -49,7 +27,7 @@ Scene::Scene()
 
 void Scene::init()
 {
-    _shaderProgram = createShaderProgramWithSource(vertexShaderString, fragmentShaderString);
+    _shaderProgram = createShaderProgramWithFilenames("FragPosition.vert", "FragPosition.frag");
     glUseProgram(_shaderProgram);
     printOpenGLError();
     

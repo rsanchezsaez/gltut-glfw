@@ -9,10 +9,28 @@
 #ifndef gltut_glfw_glhelpers_h
 #define gltut_glfw_glhelpers_h
 
-GLuint createAndCompilerShader(GLenum shaderType, const std::string &strShaderFile)
+#include <fstream>
+#include <sstream>
+
+//std::string FindFileOrThrow( const std::string &strBasename )
+//{
+//    std::string strFilename = strBasename;
+//    std::ifstream testFile(strFilename.c_str());
+//    if(testFile.is_open())
+//        return strFilename;
+//    
+//    strFilename = strBasename;
+//    testFile.open(strFilename.c_str());
+//    if(testFile.is_open())
+//        return strFilename;
+//    
+//    throw std::runtime_error("Could not find the file " + strBasename);
+//}
+
+GLuint createAndCompilerShaderWithSource(GLenum shaderType, const std::string &shaderSource)
 {
     GLuint shader = glCreateShader(shaderType);
-    const char *strFileData = strShaderFile.c_str();
+    const char *strFileData = shaderSource.c_str();
     glShaderSource(shader, 1, &strFileData, NULL);
     
     glCompileShader(shader);
@@ -39,6 +57,25 @@ GLuint createAndCompilerShader(GLenum shaderType, const std::string &strShaderFi
     }
     
 	return shader;
+}
+
+GLuint createAndCompilerShaderWithFilename(GLenum shaderType, const std::string &shaderFilename)
+{
+//    std::string strFilename = FindFileOrThrow(strShaderFilename);
+    std::ifstream shaderFile(shaderFilename.c_str());
+    std::stringstream shaderData;
+    shaderData << shaderFile.rdbuf();
+    shaderFile.close();
+    
+    try
+    {
+        return createAndCompilerShaderWithSource(shaderType, shaderData.str());
+    }
+    catch(std::exception &e)
+    {
+        fprintf(stderr, "%s\n", e.what());
+        throw;
+    }
 }
 
 GLuint createProgramWithShaderList(const std::vector<GLuint> &shaderList)
@@ -71,14 +108,36 @@ GLuint createProgramWithShaderList(const std::vector<GLuint> &shaderList)
 	return program;
 }
 
-GLuint createShaderProgram(const std::string &vertexShaderString,
-                           const std::string &fragmentShaderString)
+GLuint createShaderProgramWithFilenames(const std::string &vertexShaderFilename,
+                                        const std::string &fragmentShaderFilename)
 {
     // Compiler shaders and create program
     std::vector<GLuint> shaderList;
-    GLuint vertexShader = createAndCompilerShader(GL_VERTEX_SHADER, vertexShaderString);
+    GLuint vertexShader = createAndCompilerShaderWithFilename(GL_VERTEX_SHADER, vertexShaderFilename);
 	shaderList.push_back( vertexShader );
-    GLuint fragmentShader = createAndCompilerShader(GL_FRAGMENT_SHADER, fragmentShaderString);
+    GLuint fragmentShader = createAndCompilerShaderWithFilename(GL_FRAGMENT_SHADER, fragmentShaderFilename);
+	shaderList.push_back( fragmentShader );
+    
+    // Default behavior already
+    // glBindFragDataLocationEXT( fragmentShader, 0, "outColor" );
+    
+	GLuint shaderProgram = createProgramWithShaderList(shaderList);
+	std::for_each(shaderList.begin(), shaderList.end(), glDeleteShader);
+    printOpenGLError();
+    
+    return shaderProgram;
+    
+}
+
+
+GLuint createShaderProgramWithSource(const std::string &vertexShaderSource,
+                                     const std::string &fragmentShaderSource)
+{
+    // Compiler shaders and create program
+    std::vector<GLuint> shaderList;
+    GLuint vertexShader = createAndCompilerShaderWithSource(GL_VERTEX_SHADER, vertexShaderSource);
+	shaderList.push_back( vertexShader );
+    GLuint fragmentShader = createAndCompilerShaderWithSource(GL_FRAGMENT_SHADER, fragmentShaderSource);
 	shaderList.push_back( fragmentShader );
     
     // Default behavior already
