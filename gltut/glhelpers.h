@@ -13,6 +13,8 @@
 
 #include <fstream>
 #include <sstream>
+#include <algorithm>
+#include <stdexcept>
 
 //std::string FindFileOrThrow( const std::string &strBasename )
 //{
