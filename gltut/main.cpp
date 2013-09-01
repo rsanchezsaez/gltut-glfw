@@ -44,6 +44,22 @@ void onFramebufferResize(GLFWwindow* window, int width, int height)
 
 }
 
+static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    static bool depthClampingActive = false;
+
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, GL_TRUE);
+    } else if (key == GLFW_KEY_D && action == GLFW_PRESS) {
+        if(depthClampingActive) {
+            glDisable(GL_DEPTH_CLAMP);
+        } else {
+            glEnable(GL_DEPTH_CLAMP);
+        }
+        depthClampingActive = !depthClampingActive;
+    }
+}
+
 int main(int argc, const char * argv[])
 {
     glfwSetErrorCallback(onError);
@@ -58,10 +74,13 @@ int main(int argc, const char * argv[])
     
     int windowWidth = 0;
     int windowHeight = 0;
+    
     glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
     onFramebufferResize(window, windowWidth, windowHeight);
     glfwSetFramebufferSizeCallback(window, &onFramebufferResize);
     
+    glfwSetKeyCallback(window, key_callback);
+
     while (!glfwWindowShouldClose(window))
     {
         scene.draw();
