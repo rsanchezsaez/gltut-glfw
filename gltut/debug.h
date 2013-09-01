@@ -10,9 +10,12 @@
 #ifndef gltut_glfw_debug_h
 #define gltut_glfw_debug_h
 
-#ifdef DEBUB
+#ifdef DEBUG
 
-bool printOpenGLError(const char* file,
+#include "stdlib.h"
+
+const int ExitFailure = 1;
+static bool printOpenGLError(const char* file,
                       const int line,
                       const char* extraInformation,
                       bool exitOnError)
@@ -34,7 +37,7 @@ bool printOpenGLError(const char* file,
         
         if ( exitOnError )
         {
-            exit(EXIT_FAILURE);
+            exit(ExitFailure);
         }
         
     }
@@ -42,7 +45,7 @@ bool printOpenGLError(const char* file,
     return errorHappened;
 }
 
-bool printOpenGLError()
+static bool printOpenGLError()
 {
     return printOpenGLError(__FILE__, __LINE__, NULL, false);
 }
