@@ -17,7 +17,7 @@
 
 class Scene {
     GLuint _shaderProgram;
-    GLuint _positionBufferObject;
+    GLuint _vertexBufferObject;
     GLuint _vertexArrayObject;
     
   public:
