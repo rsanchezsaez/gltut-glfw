@@ -61,9 +61,18 @@ GLuint createAndCompilerShaderWithSource(GLenum shaderType, const std::string &s
 	return shader;
 }
 
+std::string FindFileOrThrow( const std::string &filename )
+{
+    std::ifstream testFile(filename.c_str());
+    if(testFile.is_open())
+        return filename;
+    
+    throw std::runtime_error("Could not find the file: " + filename);
+}
+
 GLuint createAndCompilerShaderWithFilename(GLenum shaderType, const std::string &shaderFilename)
 {
-//    std::string strFilename = FindFileOrThrow(strShaderFilename);
+    std::string strFilename = FindFileOrThrow(shaderFilename);
     std::ifstream shaderFile(shaderFilename.c_str());
     std::stringstream shaderData;
     shaderData << shaderFile.rdbuf();
