@@ -57,7 +57,7 @@ int main(int argc, const char * argv[])
     
     int windowWidth = 0;
     int windowHeight = 0;
-    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
     onFramebufferResize(window, windowWidth, windowHeight);
     glfwSetFramebufferSizeCallback(window, &onFramebufferResize);
     
