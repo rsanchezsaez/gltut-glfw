@@ -19,7 +19,7 @@ class Scene {
     GLuint _shaderProgram;
     GLuint _positionBufferObject;
     GLuint _vertexArrayObject;
-
+    
   public:
     Scene();
     ~Scene();
