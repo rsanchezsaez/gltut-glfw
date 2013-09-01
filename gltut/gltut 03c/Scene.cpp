@@ -27,7 +27,7 @@ const float vertexPositions[] = {
 	-0.25f, -0.25f, 0.0f, 1.0f,
 };
 
-GLuint offsetLocation;
+GLuint elapsedTimeUniform;
 
 Scene::Scene()
 {
@@ -35,7 +35,7 @@ Scene::Scene()
 
 void Scene::init()
 {
-    _shaderProgram = createShaderProgramWithFilenames("positionOffset.vert", "standard.frag");
+    _shaderProgram = createShaderProgramWithFilenames("standard.vert", "standard.frag");
     glUseProgram(_shaderProgram);
     printOpenGLError();
     
@@ -52,8 +52,15 @@ void Scene::init()
 	glBindVertexArray(_vertexArrayObject);
     printOpenGLError();
 
-    // Uniform location
-    offsetLocation = glGetUniformLocation(_shaderProgram, "offset");
+    // Uniforms
+    elapsedTimeUniform = glGetUniformLocation(_shaderProgram, "time");
+    
+	GLuint loopDurationUniform = glGetUniformLocation(_shaderProgram, "loopDuration");
+	glUseProgram(_shaderProgram);
+	glUniform1f(loopDurationUniform, 5.0f);
+	glUseProgram(0);
+    printOpenGLError();
+
 }
 
 Scene::~Scene()
@@ -63,32 +70,19 @@ Scene::~Scene()
     printOpenGLError();
 }
 
-void Scene::computePositionOffsets(float &fXOffset, float &fYOffset)
-{
-	const float fLoopDuration = 5.0f;
-	const float fScale = 3.14159f * 2.0f / fLoopDuration;
-    
-	float fElapsedTime = glfwGetTime();
-    
-	float fCurrTimeThroughLoop = fmodf(fElapsedTime, fLoopDuration);
-    
-	fXOffset = cosf(fCurrTimeThroughLoop * fScale) * 0.5f;
-	fYOffset = sinf(fCurrTimeThroughLoop * fScale) * 0.5f;
-}
-
 void Scene::draw()
 {
-    float fXOffset = 0.0f, fYOffset = 0.0f;
-    this->computePositionOffsets(fXOffset, fYOffset);
-
     glClearColor(0.2f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
+    printOpenGLError();
 
-    glUniform2f(offsetLocation, fXOffset, fYOffset);
+//	glUniform1f(elapsedTimeUniform, (float)glfwGetTime());
+//    printOpenGLError();
 
 	glBindBuffer(GL_ARRAY_BUFFER, _positionBufferObject);    
     glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
+    printOpenGLError();
 
 	glDrawArrays(GL_TRIANGLES, 0, 3);
     printOpenGLError();
