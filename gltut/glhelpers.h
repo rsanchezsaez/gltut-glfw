@@ -31,6 +31,8 @@
 //    throw std::runtime_error("Could not find the file " + strBasename);
 //}
 
+#define ARRAY_COUNT( array ) (sizeof( array ) / (sizeof( array[0] ) * (sizeof( array ) != sizeof(void*) || sizeof( array[0] ) <= sizeof(void*))))
+
 GLuint createAndCompilerShaderWithSource(GLenum shaderType, const std::string &shaderSource)
 {
     GLuint shader = glCreateShader(shaderType);

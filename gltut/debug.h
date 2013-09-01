@@ -45,10 +45,7 @@ static bool printOpenGLError(const char* file,
     return errorHappened;
 }
 
-static bool printOpenGLError()
-{
-    return printOpenGLError(__FILE__, __LINE__, NULL, false);
-}
+#define printOpenGLError() printOpenGLError(__FILE__, __LINE__, NULL, false)
 
 #else
 

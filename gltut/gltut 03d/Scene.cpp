@@ -19,8 +19,6 @@
 
 #include <math.h>
 
-#define ARRAY_COUNT( array ) (sizeof( array ) / (sizeof( array[0] ) * (sizeof( array ) != sizeof(void*) || sizeof( array[0] ) <= sizeof(void*))))
-
 const float vertexPositions[] = {
 	0.25f, 0.25f, 0.0f, 1.0f,
 	0.25f, -0.25f, 0.0f, 1.0f,

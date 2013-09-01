@@ -33,7 +33,7 @@ class Scene {
 
     void reshape(int width, int height);
     
-    // Onlt used in Chapter 2
+    // Only used in Chapter 3
     void computePositionOffsets(float &fXOffset, float &fYOffset);
     void adjustVertexData(float fXOffset, float fYOffset);
 };
