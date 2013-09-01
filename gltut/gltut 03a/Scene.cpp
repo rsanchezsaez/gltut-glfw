@@ -41,7 +41,7 @@ void Scene::init()
     glGenBuffers(1, &_positionBufferObject);
     
 	glBindBuffer(GL_ARRAY_BUFFER, _positionBufferObject);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertexPositions), vertexPositions, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertexPositions), vertexPositions, GL_STREAM_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
     printOpenGLError();
     
