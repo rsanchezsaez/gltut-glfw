@@ -26,6 +26,9 @@ class Scene {
     
     void init();
     void draw();
+    
+    void computePositionOffsets(float &fXOffset, float &fYOffset);
+    void adjustVertexData(float fXOffset, float fYOffset);
 };
 
 
