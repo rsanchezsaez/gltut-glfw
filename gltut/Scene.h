@@ -26,7 +26,10 @@ class Scene {
     
     void init();
     void draw();
+
+    void reshape(int width, int height);
     
+    // Onlt used in Chapter 2
     void computePositionOffsets(float &fXOffset, float &fYOffset);
     void adjustVertexData(float fXOffset, float fYOffset);
 };

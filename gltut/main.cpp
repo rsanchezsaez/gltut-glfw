@@ -31,29 +31,9 @@ GLFWwindow* createWindow()
 
 Scene scene = Scene();
 
-const float aspectRatio = 1024.0f / 640.0f;
 void onFramebufferResize(GLFWwindow* window, int width, int height)
 {
-    int finalWidth = width;
-    int finalHeight = height;
-
-    int derivedHeight = width * (1/aspectRatio);
-    int derivedWidth = height * aspectRatio;
-    
-    if (derivedHeight <= height)
-    {
-        finalHeight = derivedHeight;
-    }
-    else if (derivedWidth <= width)
-    {
-        finalWidth = derivedWidth;
-    }
-    
-    glViewport( (width-finalWidth)  / 2,
-                (height-finalHeight) / 2,
-                finalWidth,
-                finalHeight);
-    scene.draw();
+    scene.reshape(width, height);
     glfwSwapBuffers(window);
 
 }
@@ -65,8 +45,13 @@ int main(int argc, const char * argv[])
     glfwMakeContextCurrent(window);
 
     scene.init();
+    
+    int windowWidth = 0;
+    int windowHeight = 0;
+    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    onFramebufferResize(window, windowWidth, windowHeight);
     glfwSetFramebufferSizeCallback(window, &onFramebufferResize);
-
+    
     while (!glfwWindowShouldClose(window))
     {
         scene.draw();

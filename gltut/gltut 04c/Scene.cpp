@@ -182,6 +182,32 @@ Scene::~Scene()
     printOpenGLError();
 }
 
+const float aspectRatio = 1024.0f / 640.0f;
+void Scene::reshape(int width, int height)
+{
+    int finalWidth = width;
+    int finalHeight = height;
+    
+    int derivedHeight = width * (1/aspectRatio);
+    int derivedWidth = height * aspectRatio;
+    
+    if (derivedHeight <= height)
+    {
+        finalHeight = derivedHeight;
+    }
+    else if (derivedWidth <= width)
+    {
+        finalWidth = derivedWidth;
+    }
+    
+    glViewport( (width-finalWidth)  / 2,
+               (height-finalHeight) / 2,
+               finalWidth,
+               finalHeight);
+
+    this->draw();
+}
+
 void Scene::draw()
 {
     glClearColor(0.2f, 0.0f, 0.0f, 0.0f);

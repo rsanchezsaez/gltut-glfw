@@ -22,53 +22,53 @@
 #define ARRAY_COUNT( array ) (sizeof( array ) / (sizeof( array[0] ) * (sizeof( array ) != sizeof(void*) || sizeof( array[0] ) <= sizeof(void*))))
 
 const float vertexData[] = {
-    0.25f,  0.25f, 0.75f, 1.0f,
-    0.25f, -0.25f, 0.75f, 1.0f,
-	-0.25f,  0.25f, 0.75f, 1.0f,
+    0.25f,  0.25f, -1.25f, 1.0f,
+    0.25f, -0.25f, -1.25f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
     
-    0.25f, -0.25f, 0.75f, 1.0f,
-	-0.25f, -0.25f, 0.75f, 1.0f,
-	-0.25f,  0.25f, 0.75f, 1.0f,
+    0.25f, -0.25f, -1.25f, 1.0f,
+	-0.25f, -0.25f, -1.25f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
     
-    0.25f,  0.25f, -0.75f, 1.0f,
-	-0.25f,  0.25f, -0.75f, 1.0f,
-    0.25f, -0.25f, -0.75f, 1.0f,
+    0.25f,  0.25f, -2.75f, 1.0f,
+	-0.25f,  0.25f, -2.75f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
     
-    0.25f, -0.25f, -0.75f, 1.0f,
-	-0.25f,  0.25f, -0.75f, 1.0f,
-	-0.25f, -0.25f, -0.75f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
+	-0.25f,  0.25f, -2.75f, 1.0f,
+	-0.25f, -0.25f, -2.75f, 1.0f,
     
-	-0.25f,  0.25f,  0.75f, 1.0f,
-	-0.25f, -0.25f,  0.75f, 1.0f,
-	-0.25f, -0.25f, -0.75f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
+	-0.25f, -0.25f, -1.25f, 1.0f,
+	-0.25f, -0.25f, -2.75f, 1.0f,
     
-	-0.25f,  0.25f,  0.75f, 1.0f,
-	-0.25f, -0.25f, -0.75f, 1.0f,
-	-0.25f,  0.25f, -0.75f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
+	-0.25f, -0.25f, -2.75f, 1.0f,
+	-0.25f,  0.25f, -2.75f, 1.0f,
     
-    0.25f,  0.25f,  0.75f, 1.0f,
-    0.25f, -0.25f, -0.75f, 1.0f,
-    0.25f, -0.25f,  0.75f, 1.0f,
+    0.25f,  0.25f, -1.25f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
+    0.25f, -0.25f, -1.25f, 1.0f,
     
-    0.25f,  0.25f,  0.75f, 1.0f,
-    0.25f,  0.25f, -0.75f, 1.0f,
-    0.25f, -0.25f, -0.75f, 1.0f,
+    0.25f,  0.25f, -1.25f, 1.0f,
+    0.25f,  0.25f, -2.75f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
     
-    0.25f,  0.25f, -0.75f, 1.0f,
-    0.25f,  0.25f,  0.75f, 1.0f,
-	-0.25f,  0.25f,  0.75f, 1.0f,
+    0.25f,  0.25f, -2.75f, 1.0f,
+    0.25f,  0.25f, -1.25f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
     
-    0.25f,  0.25f, -0.75f, 1.0f,
-	-0.25f,  0.25f,  0.75f, 1.0f,
-	-0.25f,  0.25f, -0.75f, 1.0f,
+    0.25f,  0.25f, -2.75f, 1.0f,
+	-0.25f,  0.25f, -1.25f, 1.0f,
+	-0.25f,  0.25f, -2.75f, 1.0f,
     
-    0.25f, -0.25f, -0.75f, 1.0f,
-	-0.25f, -0.25f,  0.75f, 1.0f,
-    0.25f, -0.25f,  0.75f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
+	-0.25f, -0.25f, -1.25f, 1.0f,
+    0.25f, -0.25f, -1.25f, 1.0f,
     
-    0.25f, -0.25f, -0.75f, 1.0f,
-	-0.25f, -0.25f, -0.75f, 1.0f,
-	-0.25f, -0.25f,  0.75f, 1.0f,
+    0.25f, -0.25f, -2.75f, 1.0f,
+	-0.25f, -0.25f, -2.75f, 1.0f,
+	-0.25f, -0.25f, -1.25f, 1.0f,
     
     
     
@@ -124,6 +124,10 @@ const float vertexData[] = {
 };
 
 GLuint offsetUniform;
+GLuint perspectiveMatrixUniform;
+
+float perspectiveMatrix[16];
+const float frustumScale = 1.0f;
 
 Scene::Scene()
 {
@@ -131,7 +135,7 @@ Scene::Scene()
 
 void Scene::init()
 {
-    _shaderProgram = createShaderProgramWithFilenames("OrthoWithOffset.vert", "StandardColors.frag");
+    _shaderProgram = createShaderProgramWithFilenames("MatrixPerspective.vert", "StandardColors.frag");
     glUseProgram(_shaderProgram);
     printOpenGLError();
     
@@ -156,6 +160,20 @@ void Scene::init()
     // Uniforms
 	offsetUniform = glGetUniformLocation(_shaderProgram, "offset");
     
+	perspectiveMatrixUniform = glGetUniformLocation(_shaderProgram, "perspectiveMatrix");
+    
+	float zNear = 0.5f; float zFar = 3.0f;
+    
+	memset(perspectiveMatrix, 0, sizeof(float) * 16);
+    
+	perspectiveMatrix[0] = frustumScale;
+	perspectiveMatrix[5] = frustumScale;
+	perspectiveMatrix[10] = (zFar + zNear) / (zNear - zFar);
+	perspectiveMatrix[14] = (2 * zFar * zNear) / (zNear - zFar);
+	perspectiveMatrix[11] = -1.0f;
+    
+	glUniformMatrix4fv(perspectiveMatrixUniform, 1, GL_FALSE, perspectiveMatrix);
+    
 }
 
 Scene::~Scene()
@@ -165,28 +183,12 @@ Scene::~Scene()
     printOpenGLError();
 }
 
-const float aspectRatio = 1024.0f / 640.0f;
 void Scene::reshape(int width, int height)
 {
-    int finalWidth = width;
-    int finalHeight = height;
+    perspectiveMatrix[0] = frustumScale / (width / (float)height);
+    perspectiveMatrix[5] = frustumScale;
     
-    int derivedHeight = width * (1/aspectRatio);
-    int derivedWidth = height * aspectRatio;
-    
-    if (derivedHeight <= height)
-    {
-        finalHeight = derivedHeight;
-    }
-    else if (derivedWidth <= width)
-    {
-        finalWidth = derivedWidth;
-    }
-    
-    glViewport( (width-finalWidth)  / 2,
-               (height-finalHeight) / 2,
-               finalWidth,
-               finalHeight);
+    glUniformMatrix4fv(perspectiveMatrixUniform, 1, GL_FALSE, perspectiveMatrix);
 
     this->draw();
 }
@@ -196,7 +198,7 @@ void Scene::draw()
     glClearColor(0.2f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    glUniform2f(offsetUniform, 0.5f, 0.25f);
+	glUniform2f(offsetUniform, 0.5f, 0.5f);
 
 	size_t colorData = sizeof(vertexData) / 2;
 	glBindBuffer(GL_ARRAY_BUFFER, _vertexBufferObject);
