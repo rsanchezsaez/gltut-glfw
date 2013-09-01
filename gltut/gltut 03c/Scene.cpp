@@ -35,7 +35,7 @@ Scene::Scene()
 
 void Scene::init()
 {
-    _shaderProgram = createShaderProgramWithFilenames("standard.vert", "standard.frag");
+    _shaderProgram = createShaderProgramWithFilenames("calcOffset.vert", "standard.frag");
     glUseProgram(_shaderProgram);
     printOpenGLError();
     
@@ -56,11 +56,8 @@ void Scene::init()
     elapsedTimeUniform = glGetUniformLocation(_shaderProgram, "time");
     
 	GLuint loopDurationUniform = glGetUniformLocation(_shaderProgram, "loopDuration");
-	glUseProgram(_shaderProgram);
 	glUniform1f(loopDurationUniform, 5.0f);
-	glUseProgram(0);
     printOpenGLError();
-
 }
 
 Scene::~Scene()
@@ -74,16 +71,14 @@ void Scene::draw()
 {
     glClearColor(0.2f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
+    
+	glUniform1f(elapsedTimeUniform, (float)glfwGetTime());
     printOpenGLError();
 
-//	glUniform1f(elapsedTimeUniform, (float)glfwGetTime());
-//    printOpenGLError();
-
-	glBindBuffer(GL_ARRAY_BUFFER, _positionBufferObject);    
+	glBindBuffer(GL_ARRAY_BUFFER, _positionBufferObject);
     glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
-    printOpenGLError();
-
+    
 	glDrawArrays(GL_TRIANGLES, 0, 3);
     printOpenGLError();
     
