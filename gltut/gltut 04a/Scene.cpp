@@ -170,6 +170,8 @@ void Scene::draw()
     glClearColor(0.2f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
+    glUniform2f(offsetUniform, 0.5f, 0.25f);
+
 	size_t colorData = sizeof(vertexData) / 2;
 	glBindBuffer(GL_ARRAY_BUFFER, _vertexBufferObject);
 	glEnableVertexAttribArray(0);
@@ -183,15 +185,5 @@ void Scene::draw()
 
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
-    printOpenGLError();
-
-
-//    glUniform1f(elapsedTimeUniform, (float)glfwGetTime() + 2.5f);
-//    printOpenGLError();
-//    
-//	glDrawArrays(GL_TRIANGLES, 0, 3);
-//    printOpenGLError();
-    
-	glDisableVertexAttribArray(0);
     printOpenGLError();
 }
