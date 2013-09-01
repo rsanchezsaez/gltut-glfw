@@ -23,8 +23,9 @@ static void onError(int error, const char* description)
 
 GLFWwindow* createWindow()
 {
-    if (!glfwInit())
+    if (!glfwInit()) {
         return NULL;
+    }
     
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 2 );

@@ -11,7 +11,9 @@
 #ifndef __gltut_glfw__Scene__
 #define __gltut_glfw__Scene__
 
+#ifndef GLFW_INCLUDE_GLCOREARB
 #define GLFW_INCLUDE_GLCOREARB
+#endif
 #define GL_GLEXT_PROTOTYPES
 #include "GLFW/glfw3.h"
 
