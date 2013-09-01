@@ -16,10 +16,15 @@
 
 const char* gltutglfwName = "gltut-glfw";
 
+static void onError(int error, const char* description)
+{
+    std::cout << "Error: " << description << std::endl;
+}
 
 GLFWwindow* createWindow()
 {
-    glfwInit();
+    if (!glfwInit())
+        return NULL;
     
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 2 );
@@ -40,8 +45,12 @@ void onFramebufferResize(GLFWwindow* window, int width, int height)
 
 int main(int argc, const char * argv[])
 {
+    glfwSetErrorCallback(onError);
     
     GLFWwindow* window = createWindow();
+    if (!window)
+        return 0;
+
     glfwMakeContextCurrent(window);
 
     scene.init();
