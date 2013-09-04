@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		3205A62417D28FC000306F8C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3205A62317D28FC000306F8C /* libglfw3.a */; };
 		3205A62917D28FD400306F8C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main.cpp */; };
+		320998EA17D7E9BE0079F668 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main.cpp */; };
+		320998EC17D7E9BE0079F668 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5E17BD7A650011D6DC /* OpenGL.framework */; };
+		320998ED17D7E9BE0079F668 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5C17BD7A5A0011D6DC /* Cocoa.framework */; };
+		320998EE17D7E9BE0079F668 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5817BD7A430011D6DC /* IOKit.framework */; };
+		320998EF17D7E9BE0079F668 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5317BD7A270011D6DC /* CoreGraphics.framework */; };
+		320998F017D7E9BE0079F668 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5517BD7A320011D6DC /* CoreFoundation.framework */; };
+		320998F117D7E9BE0079F668 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3205A62317D28FC000306F8C /* libglfw3.a */; };
+		320998FD17D7E9F00079F668 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320998FC17D7E9DF0079F668 /* Scene.cpp */; };
+		320998FE17D7E9FE0079F668 /* ColorPassthrough.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 320998FA17D7E9DF0079F668 /* ColorPassthrough.frag */; };
+		320998FF17D7E9FE0079F668 /* PosColorLocalTransform.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 320998FB17D7E9DF0079F668 /* PosColorLocalTransform.vert */; };
 		320D6CF017D2AD8A00F96CCD /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320D6CEF17D2AD8A00F96CCD /* Scene.cpp */; };
 		320D6CF617D2AE0E00F96CCD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3205A62817D28FD400306F8C /* main.cpp */; };
 		320D6CF817D2AE0E00F96CCD /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3286CF5E17BD7A650011D6DC /* OpenGL.framework */; };
@@ -209,6 +219,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		320998F217D7E9BE0079F668 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				320998FE17D7E9FE0079F668 /* ColorPassthrough.frag in CopyFiles */,
+				320998FF17D7E9FE0079F668 /* PosColorLocalTransform.vert in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		321B8C3317D2B17A00A46235 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +450,10 @@
 		3205A62817D28FD400306F8C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3205A62C17D2992D00306F8C /* glhelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glhelpers.h; sourceTree = "<group>"; };
 		3205A62E17D29C1100306F8C /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		320998F817D7E9BE0079F668 /* gltut 06c copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 06c copy"; sourceTree = BUILT_PRODUCTS_DIR; };
+		320998FA17D7E9DF0079F668 /* ColorPassthrough.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ColorPassthrough.frag; sourceTree = "<group>"; };
+		320998FB17D7E9DF0079F668 /* PosColorLocalTransform.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = PosColorLocalTransform.vert; sourceTree = "<group>"; };
+		320998FC17D7E9DF0079F668 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		320D6CEF17D2AD8A00F96CCD /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		320D6D0217D2AE0E00F96CCD /* gltut 02a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 02a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32237BD417D39BCE003DBD54 /* gltut 04a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 04a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -740,6 +765,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		320998EB17D7E9BE0079F668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320998EC17D7E9BE0079F668 /* OpenGL.framework in Frameworks */,
+				320998ED17D7E9BE0079F668 /* Cocoa.framework in Frameworks */,
+				320998EE17D7E9BE0079F668 /* IOKit.framework in Frameworks */,
+				320998EF17D7E9BE0079F668 /* CoreGraphics.framework in Frameworks */,
+				320998F017D7E9BE0079F668 /* CoreFoundation.framework in Frameworks */,
+				320998F117D7E9BE0079F668 /* libglfw3.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		320D6CF717D2AE0E00F96CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1048,6 +1086,16 @@
 			path = gltut;
 			sourceTree = "<group>";
 		};
+		320998F917D7E9DF0079F668 /* gltut 06d */ = {
+			isa = PBXGroup;
+			children = (
+				320998FA17D7E9DF0079F668 /* ColorPassthrough.frag */,
+				320998FB17D7E9DF0079F668 /* PosColorLocalTransform.vert */,
+				320998FC17D7E9DF0079F668 /* Scene.cpp */,
+			);
+			path = "gltut 06d";
+			sourceTree = "<group>";
+		};
 		320D6CEE17D2AD8A00F96CCD /* gltut 01 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1162,6 +1210,7 @@
 				3267789017D534B300109544 /* gltut 06a */,
 				326778AB17D5462E00109544 /* gltut 06b */,
 				326778C417D5483A00109544 /* gltut 06c */,
+				320998F917D7E9DF0079F668 /* gltut 06d */,
 			);
 			name = "Chapter 06";
 			sourceTree = "<group>";
@@ -1330,6 +1379,7 @@
 				3267788F17D5347800109544 /* gltut 06a */,
 				326778AA17D5461300109544 /* gltut 06b */,
 				326778C317D5482000109544 /* gltut 06c */,
+				320998F817D7E9BE0079F668 /* gltut 06c copy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1634,6 +1684,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		320998E717D7E9BE0079F668 /* gltut 06d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 320998F517D7E9BE0079F668 /* Build configuration list for PBXNativeTarget "gltut 06d" */;
+			buildPhases = (
+				320998E817D7E9BE0079F668 /* Sources */,
+				320998EB17D7E9BE0079F668 /* Frameworks */,
+				320998F217D7E9BE0079F668 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gltut 06d";
+			productName = circular;
+			productReference = 320998F817D7E9BE0079F668 /* gltut 06c copy */;
+			productType = "com.apple.product-type.tool";
+		};
 		320D6CF317D2AE0E00F96CCD /* gltut 02a */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02a" */;
@@ -2014,11 +2081,21 @@
 				3267787E17D5347800109544 /* gltut 06a */,
 				3267789917D5461300109544 /* gltut 06b */,
 				326778B217D5482000109544 /* gltut 06c */,
+				320998E717D7E9BE0079F668 /* gltut 06d */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		320998E817D7E9BE0079F668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320998FD17D7E9F00079F668 /* Scene.cpp in Sources */,
+				320998EA17D7E9BE0079F668 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		320D6CF417D2AE0E00F96CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2203,6 +2280,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		320998F617D7E9BE0079F668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"GLFW_INCLUDE_GLCOREARB=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/Frameworks/glfw-3.0.1/include",
+					"${PROJECT_DIR}/Frameworks/glm-0.9.4.4/",
+				);
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_NAME = "gltut 06c copy";
+			};
+			name = Debug;
+		};
+		320998F717D7E9BE0079F668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_PREPROCESSOR_DEFINITIONS = "GLFW_INCLUDE_GLCOREARB=1";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/Frameworks/glfw-3.0.1/include",
+					"${PROJECT_DIR}/Frameworks/glm-0.9.4.4/",
+				);
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_NAME = "gltut 06c copy";
+			};
+			name = Release;
+		};
 		320D6D0017D2AE0E00F96CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2834,6 +2944,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		320998F517D7E9BE0079F668 /* Build configuration list for PBXNativeTarget "gltut 06d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				320998F617D7E9BE0079F668 /* Debug */,
+				320998F717D7E9BE0079F668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		320D6CFF17D2AE0E00F96CCD /* Build configuration list for PBXNativeTarget "gltut 02a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
