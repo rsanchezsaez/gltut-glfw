@@ -6,5 +6,5 @@ gltut-flgw
 Tested and working on *Xcode 4.6.3 (4H1503)* running on *OS X 10.8.4*.
 
 ***Progress:***
-  - Chapters 1 to 5 complete.
-  - Chapter 6 work in progress.
+  - Chapters 1 to 6 complete.
+  - Chapter 7 work in progress.
