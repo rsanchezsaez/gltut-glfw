@@ -263,5 +263,8 @@ void Scene::draw()
     glDrawElementsBaseVertex(GL_TRIANGLES, ARRAY_COUNT(indexData),
                              GL_UNSIGNED_SHORT, 0, numberOfVertices / 2);
     printOpenGLError();
+}
 
+void Scene::keyStateChanged(int key, int action)
+{
 }

@@ -117,3 +117,7 @@ void Scene::draw()
 	glDisableVertexAttribArray(0);
     printOpenGLError();
 }
+
+void Scene::keyStateChanged(int key, int action)
+{
+}

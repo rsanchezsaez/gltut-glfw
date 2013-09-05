@@ -450,7 +450,7 @@
 		3205A62817D28FD400306F8C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3205A62C17D2992D00306F8C /* glhelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glhelpers.h; sourceTree = "<group>"; };
 		3205A62E17D29C1100306F8C /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		320998F817D7E9BE0079F668 /* gltut 06c copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 06c copy"; sourceTree = BUILT_PRODUCTS_DIR; };
+		320998F817D7E9BE0079F668 /* gltut 06d */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gltut 06d"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320998FA17D7E9DF0079F668 /* ColorPassthrough.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ColorPassthrough.frag; sourceTree = "<group>"; };
 		320998FB17D7E9DF0079F668 /* PosColorLocalTransform.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = PosColorLocalTransform.vert; sourceTree = "<group>"; };
 		320998FC17D7E9DF0079F668 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
@@ -1379,7 +1379,7 @@
 				3267788F17D5347800109544 /* gltut 06a */,
 				326778AA17D5461300109544 /* gltut 06b */,
 				326778C317D5482000109544 /* gltut 06c */,
-				320998F817D7E9BE0079F668 /* gltut 06c copy */,
+				320998F817D7E9BE0079F668 /* gltut 06d */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1698,7 +1698,7 @@
 			);
 			name = "gltut 06d";
 			productName = circular;
-			productReference = 320998F817D7E9BE0079F668 /* gltut 06c copy */;
+			productReference = 320998F817D7E9BE0079F668 /* gltut 06d */;
 			productType = "com.apple.product-type.tool";
 		};
 		320D6CF317D2AE0E00F96CCD /* gltut 02a */ = {
@@ -2294,7 +2294,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
 				OTHER_LDFLAGS = "-lglfw3";
-				PRODUCT_NAME = "gltut 06c copy";
+				PRODUCT_NAME = "gltut 06d";
 			};
 			name = Debug;
 		};
@@ -2309,7 +2309,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks/glfw-3.0.1";
 				OTHER_LDFLAGS = "-lglfw3";
-				PRODUCT_NAME = "gltut 06c copy";
+				PRODUCT_NAME = "gltut 06d";
 			};
 			name = Release;
 		};

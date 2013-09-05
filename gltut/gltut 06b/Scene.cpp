@@ -257,3 +257,7 @@ void Scene::draw()
     
 	glBindVertexArray(0);
 }
+
+void Scene::keyStateChanged(int key, int action)
+{
+}

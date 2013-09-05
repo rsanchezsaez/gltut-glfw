@@ -50,13 +50,15 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
-    } else if (key == GLFW_KEY_D && action == GLFW_PRESS) {
+    } else if (key == GLFW_KEY_1 && action == GLFW_PRESS) {
         if(depthClampingActive) {
             glDisable(GL_DEPTH_CLAMP);
         } else {
             glEnable(GL_DEPTH_CLAMP);
         }
         depthClampingActive = !depthClampingActive;
+    } else if ( action == GLFW_PRESS ) {
+        scene.keyStateChanged(key, action);
     }
 }
 

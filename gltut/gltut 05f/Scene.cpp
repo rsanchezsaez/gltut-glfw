@@ -266,3 +266,7 @@ void Scene::draw()
         //		printf(strOutput.c_str());
 	}
 }
+
+void Scene::keyStateChanged(int key, int action)
+{
+}

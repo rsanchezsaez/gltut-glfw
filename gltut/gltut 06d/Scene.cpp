@@ -544,7 +544,7 @@ void Scene::init()
     printOpenGLError();
 
     // Matrix
-    float fzNear = 1.0f; float fzFar = 45.0f;
+    float fzNear = 1.0f; float fzFar = 100.0f;
     
 	cameraToClipMatrix[0].x = frustumScale;
 	cameraToClipMatrix[1].y = frustumScale;
@@ -625,4 +625,26 @@ void Scene::draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	g_armature.Draw();
+}
+
+void Scene::keyStateChanged(int key, int action)
+{
+    if ( action == GLFW_PRESS ) {
+        switch (key)
+        {
+            case GLFW_KEY_A: g_armature.AdjBase(true); break;
+            case GLFW_KEY_D: g_armature.AdjBase(false); break;
+            case GLFW_KEY_W: g_armature.AdjUpperArm(false); break;
+            case GLFW_KEY_S: g_armature.AdjUpperArm(true); break;
+            case GLFW_KEY_R: g_armature.AdjLowerArm(false); break;
+            case GLFW_KEY_F: g_armature.AdjLowerArm(true); break;
+            case GLFW_KEY_T: g_armature.AdjWristPitch(false); break;
+            case GLFW_KEY_G: g_armature.AdjWristPitch(true); break;
+            case GLFW_KEY_Z: g_armature.AdjWristRoll(true); break;
+            case GLFW_KEY_C: g_armature.AdjWristRoll(false); break;
+            case GLFW_KEY_Q: g_armature.AdjFingerOpen(true); break;
+            case GLFW_KEY_E: g_armature.AdjFingerOpen(false); break;
+            case GLFW_KEY_ENTER: g_armature.WritePose(); break;
+        }
+    }
 }

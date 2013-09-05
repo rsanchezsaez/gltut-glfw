@@ -278,5 +278,8 @@ void Scene::draw()
     printOpenGLError();
 	glDrawElements(GL_TRIANGLES, ARRAY_COUNT(indexData), GL_UNSIGNED_SHORT, 0);
     printOpenGLError();
+}
 
+void Scene::keyStateChanged(int key, int action)
+{
 }
