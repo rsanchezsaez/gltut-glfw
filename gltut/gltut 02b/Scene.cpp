@@ -49,7 +49,7 @@ void Scene::init()
     printOpenGLError();
 }
 
-const float aspectRatio = 1024.0f / 640.0f;
+const float aspectRatio = 1.0f;
 void Scene::reshape(int width, int height)
 {
     int finalWidth = width;
