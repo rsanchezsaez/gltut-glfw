@@ -7,4 +7,4 @@ Tested and working on *Xcode 4.6.3 (4H1503)* running on *OS X 10.8.4*.
 
 ***Progress:***
   - Chapters 1 to 6 complete.
-  - Chapter 7+ when I have time. I am happy to merge if somebody wants to contribute.
+  - Chapter 7+ missing. I am happy to merge if somebody wants to contribute.
